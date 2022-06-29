@@ -241,6 +241,7 @@ footer {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -254,6 +255,10 @@ footer p {
 
 footer .link-container {
   align-self: center;
+}
+
+footer .contact-container img {
+  display: none;
 }
 
 
@@ -302,12 +307,6 @@ footer .link-container {
   }
 
   /* FOOTER */ 
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   footer .link-container img {
     width: 30px;
