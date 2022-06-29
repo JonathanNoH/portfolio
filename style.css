@@ -297,13 +297,24 @@ footer .link-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
+  .project-img {
+    line-height: 6rem;
+  }
+
   /* FOOTER */ 
 
   footer {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   footer .link-container img {
     width: 30px;
+  }
+
+  footer .contact-container {
+    display: flex;
+    gap: 0.5rem;
   }
 }
