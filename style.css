@@ -74,6 +74,12 @@ select {
 }
 
 /* END CSS RESET */
+
+:root {
+  --grey: rgb(99, 99, 99);
+  --white: white;
+  --main-color: #41ade5;
+}
 /* FONTS */
 @font-face {
   font-family: "Playfair Display";
@@ -91,6 +97,20 @@ body {
 
 h1, h2, h3 {
   font-family: "Playfair Display", 'Times New Roman', Times, serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 12px rgb(44, 44, 44);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: var(--grey);
 }
 /* END FONTS */
 /* IMAGES */
@@ -112,13 +132,13 @@ header, main, footer {
 /* HEADER */
 
 header {
-  background: #41ade5;
+  background: var(--main-color);
   position: relative;
   z-index: -1;
 }
 
 header::after {
-  background: white;
+  background: var(--white);
   bottom: 0;
   content: '';
   display: block;
@@ -129,11 +149,6 @@ header::after {
   transform: skewY(-10deg);
   transform-origin: 100%;
   z-index: -2;
-}
-
-main {
-  z-index: 2;
-  background-color: white;
 }
 
 .profile-container {
@@ -148,7 +163,105 @@ main {
   right: 0;
   bottom: 0;
   text-align: center;
-  color: white;
+  color: var(--white);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.about-container > h2 {
+  text-align: center;
+}
+
+.about-container .link-container {
+  align-self: center;
+}
+
+.link-container {
+  display: flex;
+  gap: 1rem;
 }
 
 /* END HEADER */
+/* MAIN */
+
+main {
+  margin-top: 2rem;
+}
+
+main h2 {
+  text-align: center;
+}
+
+.projects-container {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.project-card {
+  box-shadow: 0 4px 8px rgb(199, 199, 199);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .flex-container {
+  display: flex;
+}
+
+.project-card .link-container {
+  margin-left: auto;
+}
+
+.project-card .flex-container,
+.project-card p {
+  padding: 1rem;
+}
+
+.project-img {
+  font-family: "Playfair Display";
+  text-align: center;
+  font-size: 2rem;
+  height: 12rem;
+  line-height: 12rem;
+  color: var(--white);
+}
+
+/* END MAIN */ 
+/* FOOTER */ 
+
+footer {
+  background-color: #41ade5;
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer > h2 {
+  text-align: center;
+}
+
+footer p {
+  color: var(--white);
+}
+
+footer .link-container {
+  align-self: center;
+}
+
+
+
+@media (min-width: 800px) {
+  header, main, footer {
+    padding: 4rem;
+  }
+  .profile-container {
+    max-width: 35vw;
+  }
+}
