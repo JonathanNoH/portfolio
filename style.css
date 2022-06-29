@@ -178,6 +178,7 @@ header::after {
 
 .about-container .link-container {
   align-self: center;
+  margin-top: 0.5rem;
 }
 
 .link-container {
@@ -235,7 +236,7 @@ main h2 {
 /* FOOTER */ 
 
 footer {
-  background-color: #41ade5;
+  background-color: var(--main-color);
   color: var(--white);
 
   display: flex;
@@ -261,7 +262,32 @@ footer .link-container {
   header, main, footer {
     padding: 4rem;
   }
-  .profile-container {
-    max-width: 35vw;
+
+  /* HEADER */
+  header {
+    display: grid;
+    grid-template-columns: minmax(min-content, 35vw) 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .profile-container,
+  .about-container {
+    max-width: 70ch;
+  }
+
+  .about-container {
+    background-color: var(--white);
+    box-shadow: 4px 4px 4px rgb(199, 199, 199);
+    padding: 1rem;
+  }
+
+  .about-container h2 {
+    text-align: start;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-container .link-container {
+    margin-left: auto;
   }
 }
