@@ -73,6 +73,28 @@ select {
   }
 }
 
+/* END CSS RESET */
+/* FONTS */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/PlayfairDisplay-VariableFont_wght.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.woff") format("woff");
+}
+
+body {
+  font-family: "Roboto";
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", 'Times New Roman', Times, serif;
+}
+/* END FONTS */
+/* IMAGES */
+
 .profile {
   max-width: 100%;
 }
@@ -80,3 +102,48 @@ select {
 svg {
   height: 50px;
 }
+
+/* END IMAGES */
+
+header, main, footer {
+  padding: 1rem;
+}
+
+/* HEADER */
+
+header {
+  background: #41ade5;
+  position: relative;
+  z-index: 1;
+}
+
+header::after {
+  background: white;
+  bottom: 10%;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-10deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-container > h1 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: white;
+}
+
+/* END HEADER */
