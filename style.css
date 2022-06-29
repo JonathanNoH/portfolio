@@ -83,12 +83,12 @@ select {
 /* FONTS */
 @font-face {
   font-family: "Playfair Display";
-  src: url("/fonts/PlayfairDisplay-VariableFont_wght.woff") format("woff");
+  src: url("./fonts/PlayfairDisplay-VariableFont_wght.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.woff") format("woff");
+  src: url("./fonts/Roboto-Regular.woff") format("woff");
 }
 
 body {
